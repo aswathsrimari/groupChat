@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_900"
+    android:paddingStart="35dp"
+    android:paddingEnd="35dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/android_logo"
+            android:tint="@color/green_400"   
+            />
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/blue_grey_500"
+        android:textStyle="bold"
+
+        />
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginRight="-4dp"
+        android:maxLength="50"
+        android:maxLines="50"
+        android:id="@+id/email_ed_login"
+        android:textColor="@color/blue_grey_300"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="password"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/blue_grey_500"
+        />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:maxLength="50"
+            android:maxLines="50"
+            android:id="@+id/password_ed_login"
+            android:textColor="@color/blue_grey_300"
+            android:inputType="textPassword"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            ></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"
+            android:onClick="forgotPassword"
+            android:text="Forgot Password"
+            android:textColor="@color/blue_grey_400"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            ></View>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+
+
+
+            android:textAllCaps="false"
+            android:onClick="LoginUser"
+            android:textColor="@color/blue_grey_900"
+            android:text="Login"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            ></View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="New user?"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/blue_grey_300"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:onClick="gotoRegister"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/blue_grey_400"
+                android:textStyle="bold"
+                />
+
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:indeterminateTint="@color/blue_grey_400"
+                android:visibility="gone"
+                android:id="@+id/progressBarLogin"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
